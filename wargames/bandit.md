@@ -163,14 +163,23 @@ bandit12@bandit:/tmp/gxuvimr$ gzip -d data8.gz
 bandit12@bandit:/tmp/gxuvimr$ file data8
 data8: ASCII text
 bandit12@bandit:/tmp/gxuvimr$ cat data8
-The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 ```
 
 # Level 13 → Level 14
 
 ssh -p 2220 bandit13@bandit.labs.overthewire.org
 
+cat sshkey.private
+
+ssh -i sshkey.private -p 2220 bandit14@localhost
+
+cat /etc/bandit_pass/bandit14
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
 # Level 14 → Level 15
+
+ssh -p 2220 bandit14@bandit.labs.overthewire.org
 
 # Level 15 → Level 16
 
