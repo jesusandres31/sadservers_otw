@@ -93,9 +93,82 @@ The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 
 # Level 11 → Level 12
 
+ssh -p 2220 bandit11@bandit.labs.overthewire.org
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
 # Level 12 → Level 13
 
+ssh -p 2220 bandit12@bandit.labs.overthewire.org
+
+```sh
+temp_dir=$(mktemp -d)
+echo "Temporary directory created at: $temp_dir"
+
+cp data.txt $temp_dir
+
+cd $temp_dir
+
+bandit12@bandit:/tmp/gxuvimr$ xxd -r data.txt > data
+bandit12@bandit:/tmp/gxuvimr$ ls
+data  data.txt
+
+bandit12@bandit:/tmp/gxuvimr$ file data
+data: gzip compressed data, was "data2.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+bandit12@bandit:/tmp/gxuvimr$ mv data data.gz
+bandit12@bandit:/tmp/gxuvimr$ gzip -d data.gz
+
+bandit12@bandit:/tmp/gxuvimr$
+bandit12@bandit:/tmp/gxuvimr$ file data
+data: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/gxuvimr$ mv data data.bz2
+bandit12@bandit:/tmp/gxuvimr$ bzip2 -d data.bz2
+
+bandit12@bandit:/tmp/gxuvimr$ file data
+data: gzip compressed data, was "data4.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+bandit12@bandit:/tmp/gxuvimr$ mv data data.gz
+bandit12@bandit:/tmp/gxuvimr$ gzip -d data.gz
+
+bandit12@bandit:/tmp/gxuvimr$ file data
+data: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/gxuvimr$ mv data data.tar
+bandit12@bandit:/tmp/gxuvimr$ tar -xvf data.tar
+data5.bin
+bandit12@bandit:/tmp/gxuvimr$ ls
+data5.bin  data.tar  data.txt
+
+bandit12@bandit:/tmp/gxuvimr$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/gxuvimr$ mv data5.bin data5.tar
+bandit12@bandit:/tmp/gxuvimr$ tar -xvf data5.tar
+data6.bin
+
+bandit12@bandit:/tmp/gxuvimr$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/gxuvimr$ mv data6.bin data6.bz2
+bandit12@bandit:/tmp/gxuvimr$ bzip2 -d data6.bz2
+
+bandit12@bandit:/tmp/gxuvimr$ file data6
+data6: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/gxuvimr$ mv data6 data6.tar
+bandit12@bandit:/tmp/gxuvimr$ tar -xvf data6.tar
+data8.bin
+
+bandit12@bandit:/tmp/gxuvimr$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+bandit12@bandit:/tmp/gxuvimr$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/gxuvimr$ gzip -d data8.gz
+
+bandit12@bandit:/tmp/gxuvimr$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/gxuvimr$ cat data8
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+```
+
 # Level 13 → Level 14
+
+ssh -p 2220 bandit13@bandit.labs.overthewire.org
 
 # Level 14 → Level 15
 
