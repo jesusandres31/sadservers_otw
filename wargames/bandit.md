@@ -11,23 +11,85 @@ The password you are looking for is: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 
 ssh -p 2220 bandit1@bandit.labs.overthewire.org
 
+cat ./-
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
 # Level 2 → Level 3
+
+ssh -p 2220 bandit2@bandit.labs.overthewire.org
+
+cat spaces\ in\ this\ filename
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
 # Level 3 → Level 4
 
+ssh -p 2220 bandit3@bandit.labs.overthewire.org
+
+cat ...Hiding-From-You
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
 # Level 4 → Level 5
+
+ssh -p 2220 bandit4@bandit.labs.overthewire.org
+
+```sh
+for file in ./-file0{0..9}; do
+    file "$file"
+done
+```
+
+cat ./-file07
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 # Level 5 → Level 6
 
+ssh -p 2220 bandit5@bandit.labs.overthewire.org
+
+```sh
+find . -type f -size 1033c ! -perm /111 -exec file {} + | grep "ASCII text"
+```
+
+cat maybehere07/.file2
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
 # Level 6 → Level 7
+
+ssh -p 2220 bandit6@bandit.labs.overthewire.org
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+cat /var/lib/dpkg/info/bandit7.password
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 # Level 7 → Level 8
 
+ssh -p 2220 bandit7@bandit.labs.overthewire.org
+
+grep "millionth" data.txt
+millionth dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
 # Level 8 → Level 9
+
+ssh -p 2220 bandit8@bandit.labs.overthewire.org
+
+sort data.txt | uniq -c | grep " 1 "
+1 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 # Level 9 → Level 10
 
+ssh -p 2220 bandit9@bandit.labs.overthewire.org
+
+strings data.txt | grep "^==="
+========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
 # Level 10 → Level 11
+
+ssh -p 2220 bandit10@bandit.labs.overthewire.org
+
+bandit10@bandit:~$ cat data.txt
+VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
+bandit10@bandit:~$ echo "VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==" | base64 -d
+The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 
 # Level 11 → Level 12
 
