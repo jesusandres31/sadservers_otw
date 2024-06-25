@@ -262,7 +262,14 @@ cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
 
 ssh -p 2220 bandit19@bandit.labs.overthewire.org
 
+ls -l
+
+./bandit20-do cat /etc/bandit_pass/bandit20
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
 # Level 20 → Level 21
+
+ssh -p 2220 bandit20@bandit.labs.overthewire.org
 
 # Level 21 → Level 22
 
