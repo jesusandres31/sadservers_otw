@@ -271,6 +271,25 @@ ls -l
 
 ssh -p 2220 bandit20@bandit.labs.overthewire.org
 
+```sh
+bandit20@bandit:~$ ls
+suconnect
+bandit20@bandit:~$ nc -lvp 12345
+Listening on 0.0.0.0 12345
+Connection received on localhost 59664
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+bandit20@bandit:~$
+```
+
+```sh
+bandit20@bandit:~$ ./suconnect 12345
+Read: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+Password matches, sending next password
+```
+
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+
 # Level 21 → Level 22
 
 # Level 22 → Level 23
