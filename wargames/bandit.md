@@ -312,7 +312,13 @@ tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
 
 ssh -p 2220 bandit22@bandit.labs.overthewire.org
 
+```sh
+
+```
+
 # Level 23 → Level 24
+
+ssh -p 2220 bandit23@bandit.labs.overthewire.org
 
 # Level 24 → Level 25
 
