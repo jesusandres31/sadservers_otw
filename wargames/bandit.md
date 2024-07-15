@@ -424,11 +424,63 @@ bandit24@bandit:/tmp/tmp.zoH1sk6a1R$
 
 ssh -p 2220 bandit25@bandit.labs.overthewire.org
 
+```sh
+cat /etc/passwd | grep bandit26
+ls -la /usr/bin/showtext
+cat /usr/bin/showtext
+ls
+chmod 700 bandit26.sshkey
+# make the terminal window smaller
+ssh -i bandit26.sshkey bandit26@localhost -p 2220
+v
+# make the terminal window bigger
+:set shell=/bin/bash
+:shell
+bandit26@bandit:~$ cat /etc/bandit_pass/bandit26
+s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+```
+
 # Level 26 → Level 27
+
+```sh
+:shell
+bandit26@bandit:~$ cat /etc/bandit_pass/bandit26
+s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+bandit26@bandit:~$ ls
+bandit27-do  text.txt
+bandit26@bandit:~$ cat /etc/bandit\_pass/bandit26
+s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+bandit26@bandit:~$
+bandit26@bandit:~$ bandit27-do
+bandit27-do: command not found
+bandit26@bandit:~$ ./bandit27-do
+Run a command as another user.
+  Example: ./bandit27-do id
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit\_pass/bandit27
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+```
 
 # Level 27 → Level 28
 
+ssh -p 2220 bandit27@bandit.labs.overthewire.org
+
+```sh
+bandit27@bandit:~$ mktemp -d
+/tmp/tmp.U13ZQWNv0f
+bandit27@bandit:~$ cd /tmp/tmp.U13ZQWNv0f
+bandit27@bandit:/tmp/tmp.U13ZQWNv0f$ git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+bandit27@bandit:/tmp/tmp.U13ZQWNv0f$ ls
+repo
+bandit27@bandit:/tmp/tmp.U13ZQWNv0f$ cd repo/
+bandit27@bandit:/tmp/tmp.U13ZQWNv0f/repo$ ls
+README
+bandit27@bandit:/tmp/tmp.U13ZQWNv0f/repo$ cat README
+The password to the next level is: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+```
+
 # Level 28 → Level 29
+
+ssh -p 2220 bandit28@bandit.labs.overthewire.org
 
 # Level 29 → Level 30
 
