@@ -484,10 +484,20 @@ ssh -p 2220 bandit28@bandit.labs.overthewire.org
 
 # Level 29 → Level 30
 
+ssh -p 2220 bandit29@bandit.labs.overthewire.org
+
 # Level 30 → Level 31
+
+ssh -p 2220 bandit30@bandit.labs.overthewire.org
 
 # Level 31 → Level 32
 
+ssh -p 2220 bandit31@bandit.labs.overthewire.org
+
 # Level 32 → Level 33
 
+ssh -p 2220 bandit32@bandit.labs.overthewire.org
+
 # Level 33 → Level 34
+
+ssh -p 2220 bandit33@bandit.labs.overthewire.org
