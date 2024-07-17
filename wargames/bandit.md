@@ -482,22 +482,289 @@ The password to the next level is: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
 
 ssh -p 2220 bandit28@bandit.labs.overthewire.org
 
+```sh
+bandit28@bandit:~$ mktemp -d
+/tmp/tmp.DQdqMNdbg3
+bandit28@bandit:~$ cd /tmp/tmp.DQdqMNdbg3
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3$ git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repobandit28@bandit:/tmp/tmp.DQdqMNdbg3$ ls
+repo
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3$ ls repo/
+README.md
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3$ cat repo/README.md
+# Bandit Notes
+Some notes for level29 of bandit.
+
+## credentials
+
+- username: bandit29
+- password: xxxxxxxxxx
+
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3$
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3$ cd repo/
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3/repo$ git log
+commit ad9a337071c5e3d4509559d36128b38a0e5571f1 (HEAD -> master, origin/master, origin/HEAD)
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    fix info leak
+
+commit 229f6001e1ff407bb935b82a94c6749e41a0693e
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    add missing data
+
+commit ea882192c25642e69627b13179f9fb98f409ed5d
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    initial commit of README.md
+bandit28@bandit:/tmp/tmp.DQdqMNdbg3/repo$ git show ad9a33707
+commit ad9a337071c5e3d4509559d36128b38a0e5571f1 (HEAD -> master, origin/master, origin/HEAD)
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    fix info leak
+
+diff --git a/README.md b/README.md
+index d4e3b74..5c6457b 100644
+--- a/README.md
++++ b/README.md
+@@ -4,5 +4,5 @@ Some notes for level29 of bandit.
+ ## credentials
+
+ - username: bandit29
+-- password: 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
++- password: xxxxxxxxxx
+
+```
+
 # Level 29 → Level 30
 
 ssh -p 2220 bandit29@bandit.labs.overthewire.org
+
+```sh
+bandit29@bandit:~$ mktemp -d
+/tmp/tmp.npkF48b4SE
+bandit29@bandit:~$ cd /tmp/tmp.npkF48b4SE
+bandit29@bandit:/tmp/tmp.npkF48b4SE$ git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+bandit29@bandit:/tmp/tmp.npkF48b4SE$ ls
+repo
+bandit29@bandit:/tmp/tmp.npkF48b4SE$ cd repo/
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ ls -la
+total 16
+drwxrwxr-x 3 bandit29 bandit29 4096 Jul 17 02:28 .
+drwx------ 3 bandit29 bandit29 4096 Jul 17 02:28 ..
+drwxrwxr-x 8 bandit29 bandit29 4096 Jul 17 02:28 .git
+-rw-rw-r-- 1 bandit29 bandit29  131 Jul 17 02:28 README.md
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: <no passwords in production!>
+
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ git log
+commit a442ed81c95fac132590fdd218bd7b831db81fe4 (HEAD -> master, origin/master, origin/HEAD)
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    fix username
+
+commit 046a4d27b46af8f02879c890972d7f125f3ab824
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    initial commit of README.md
+
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ git checkout dev
+branch 'dev' set up to track 'origin/dev'.
+Switched to a new branch 'dev'
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ ls -la
+total 20
+drwxrwxr-x 4 bandit29 bandit29 4096 Jul 17 02:33 .
+drwx------ 3 bandit29 bandit29 4096 Jul 17 02:28 ..
+drwxrwxr-x 2 bandit29 bandit29 4096 Jul 17 02:33 code
+drwxrwxr-x 8 bandit29 bandit29 4096 Jul 17 02:33 .git
+-rw-rw-r-- 1 bandit29 bandit29  134 Jul 17 02:33 README.md
+bandit29@bandit:/tmp/tmp.npkF48b4SE/repo$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+
+```
 
 # Level 30 → Level 31
 
 ssh -p 2220 bandit30@bandit.labs.overthewire.org
 
+```sh
+bandit30@bandit:~$ mktemp -d
+/tmp/tmp.AKfrPbv5jm
+bandit30@bandit:~$ cd /tmp/tmp.AKfrPbv5jm
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm$ git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm$ cd repo
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm/repo$ ls -la
+total 16
+drwxrwxr-x 3 bandit30 bandit30 4096 Jul 17 02:36 .
+drwx------ 3 bandit30 bandit30 4096 Jul 17 02:36 ..
+drwxrwxr-x 8 bandit30 bandit30 4096 Jul 17 02:36 .git
+-rw-rw-r-- 1 bandit30 bandit30   30 Jul 17 02:36 README.md
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm/repo$ cat README.md
+just an epmty file... muahaha
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm/repo$ git log
+commit 49ebc0513539a56d3626f3121ff4e72585064047 (HEAD -> master, origin/master, origin/HEAD)
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:17 2024 +0000
+
+    initial commit of README.md
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm/repo$ git tag
+secret
+bandit30@bandit:/tmp/tmp.AKfrPbv5jm/repo$ git show secret
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+```
+
 # Level 31 → Level 32
 
 ssh -p 2220 bandit31@bandit.labs.overthewire.org
+
+```sh
+bandit31@bandit:~$ mktemp -d
+/tmp/tmp.MUXHCWa4LN
+bandit31@bandit:~$ cd /tmp/tmp.MUXHCWa4LN
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN$ git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN$ cd repo/
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ ls -la
+total 20
+drwxrwxr-x 3 bandit31 bandit31 4096 Jul 17 02:39 .
+drwx------ 3 bandit31 bandit31 4096 Jul 17 02:39 ..
+drwxrwxr-x 8 bandit31 bandit31 4096 Jul 17 02:39 .git
+-rw-rw-r-- 1 bandit31 bandit31    6 Jul 17 02:39 .gitignore
+-rw-rw-r-- 1 bandit31 bandit31  147 Jul 17 02:39 README.md
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ cat README.md
+This time your task is to push a file to the remote repository.
+
+Details:
+    File name: key.txt
+    Content: 'May I come in?'
+    Branch: master
+
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git branch
+* master
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ echo 'May I come in?' > key.txt
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ ls
+key.txt  README.md
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ cat .gitignore
+*.txt
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git add -f key.txt
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git commit -a
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+[master 86c769c] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 key.txt
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git push -u origin mastergit push -u origin master
+error: src refspec mastergit does not match any
+error: src refspec push does not match any
+error: failed to push some refs to 'ssh://localhost:2220/home/bandit31-git/repo'
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+bandit31@bandit:/tmp/tmp.MUXHCWa4LN/repo$ git push
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit31/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit31-git@localhost's password:
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: ### Attempting to validate files... ####
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: Well done! Here is the password for the next level:
+remote: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+To ssh://localhost:2220/home/bandit31-git/repo
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'ssh://localhost:2220/home/bandit31-git/repo'
+```
+
+3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
 
 # Level 32 → Level 33
 
 ssh -p 2220 bandit32@bandit.labs.overthewire.org
 
+```sh
+WELCOME TO THE UPPERCASE SHELL
+>> ls
+sh: 1: LS: Permission denied
+>> echo $0
+sh: 1: ECHO: Permission denied
+>> $0
+$ ls -la
+total 36
+drwxr-xr-x  2 root     root      4096 Jun 20 04:07 .
+drwxr-xr-x 70 root     root      4096 Jun 20 04:08 ..
+-rw-r--r--  1 root     root       220 Mar 31 08:41 .bash_logout
+-rw-r--r--  1 root     root      3771 Mar 31 08:41 .bashrc
+-rw-r--r--  1 root     root       807 Mar 31 08:41 .profile
+-rwsr-x---  1 bandit33 bandit32 15136 Jun 20 04:07 uppershell
+$ whoami
+bandit33
+$ cat /etc/bandit\_pass/bandit33
+tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+```
+
 # Level 33 → Level 34
 
 ssh -p 2220 bandit33@bandit.labs.overthewire.org
+
+```sh
+bandit33@bandit:~$ ls
+README.txt
+bandit33@bandit:~$ cat README.txt
+Congratulations on solving the last level of this game!
+
+At this moment, there are no more levels to play in this game. However, we are constantly working
+on new levels and will most likely expand this game with more levels soon.
+Keep an eye out for an announcement on our usual communication channels!
+In the meantime, you could play some of our other wargames.
+
+If you have an idea for an awesome new level, please let us know!
+```
