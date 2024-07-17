@@ -21,15 +21,6 @@ URL: http://natas0.natas.labs.overthewire.org
 
 # Level 2 → Level 3
 
-```json
-{
-  "level": "natas2",
-  "pass": "TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI",
-  "form": "https://www.wechall.net/10-levels-on-Natas.html",
-  "wfid": 3
-}
-```
-
 # Level 3 → Level 4
 
 # Level 4 → Level 5
