@@ -21,13 +21,41 @@ URL: http://natas0.natas.labs.overthewire.org
 
 # Level 2 → Level 3
 
+```txt
+# username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH
+```
+
 # Level 3 → Level 4
+
+natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
 
 # Level 4 → Level 5
 
+PS C:\Users\jesus\projects\other\otw> & C:/Users/jesus/AppData/Local/Programs/Python/Python310/python.exe c:/Users/jesus/projects/other/otw/wargames/natas/natas05.py
+
+Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+
 # Level 5 → Level 6
 
+document.cookie = "loggedin=1"
+
+0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+
 # Level 6 → Level 7
+
+```php
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+```
+
+bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
 
 # Level 7 → Level 8
 
