@@ -86,6 +86,8 @@ t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
 
 # Level 11 → Level 12
 
+The password for natas12 is yZdkjAYZRd3R7tq7T5kXMjMJlOIkzDeB
+
 # Level 12 → Level 13
 
 # Level 13 → Level 14
